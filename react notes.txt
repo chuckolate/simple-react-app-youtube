@@ -1,0 +1,82 @@
+What is React?
+- whole react dom would not be re-rendered, only the component that changes would be re-rendered.
+- react lifecycle, birth where the component makes it way towards the DOM. update - state can get changed, component gets changed. death - component not needed, it dies. everything happens in one page.
+
+What is NPM?
+- NPM, not NODE, is used to download dependencies used for your project.
+- npm start can be used without npm install
+- we use npm to isntall dependecies but our app is not a node app
+- node js is a javascript
+
+For help throughout the project, email ste.grider@gmail.com, with the relevant files
+
+all code for this course here: https://github.com/StephenGrider/ReduxCasts
+
+Modern Javascript Tooling
+- project files -> Tooling (Transpiling) -> Web Page
+- in project files, we have components and libraries. Libraries such as React.js and Redux.js. Everything is written in Javascript, written in ES6 (ES 2016), a version of Javascipt. Currently, no browser has complete support for ES6, we cant really run it in browser. We go through a tooling or transpile step. To transpile the code, we use a tool called webpack, backed by another library called Babel, or babel.js. The goal of transpiling is to transform our code, which cannot be ran in the browser, into something that can be ran in the browser. After webpack and babel finishes, it produces a single file called app.js. this file is what we use to safely run inside our browser, it contains all the sample code we wrote.
+
+GitHub profile: github.com/stephengrider
+fork over ReduxSimpleStarter and clone the repo
+
+to run the project, we use node project manager, npm install inside the project folder
+
+build a project based off youtube with search bar, video player, video description, a list of other videos and using YouTube API.
+
+to start the project, we type in npm start. starts the boiler package and runs on the local server. babel and webpack bundles the packages and makes the local server available
+
+in index.html, there is a script tag called bundle.js. this js file is the compiled javascript for our entire app. in our project repo, there is a bunch of js files, webpack and babel takes all the js file and puts it together as a single file, and makes it available called bundle.js
+
+start from scratch, delete the whole src file and make a new one...
+
+React is a javascript library used to produce html that is shown to user in a web browser. when we write react code, we are writing individual components or views, that produce html. when we write react code, we are writing multiple components and nesting them inside one another to make complex app.
+
+JSX, like ES6, cannot be ran in the browser, webpack and babel helps us translate JSX and ES6 to be ran inside the browser. We use JSX because as code gets more complicated and complex, writing ES6 makes our code more clean and concise.
+
+Javascript module, each code file that we write are separated from one another. no contact with another code unless we specifically say so. That is why we need to say we want react inside our components. After importing the react library, we are able to have access to the React variable.
+
+React library is used for components while ReactDOM library is used to render components onto the DOM.
+
+ReactDOM takes in an instance of a class. We need to instantiate our component before passing it into the ReactDOM.
+
+const App = function() {
+	return <div>Hi!</div>
+}
+- this is a component class, but ReactDOM wants a component instance of it.
+
+<App></App> == <App /> (used when there is nothing inside of it, this is a self closing tag)
+
+To render the instance of an app, do ReactDOM.render(<App />); instead.
+
+ReactDOM also takes in a target place to render the instance of the component. We want to render it in a container section of our index.html so we do this: ReactDOM.render(<App />, document.querySelector('.container'));
+
+next step, break down our mock up into multiple components!!!
+1. search bar
+2. video player
+3. video list
+4. video details
+5. our whole app, everything goes inside it
+
+RULE: one component per file, make sure it is named accordingly
+use youtube api, save it as a variable and also do npm install --save youtube-api-search
+
+state is a plain javascript object that is used to record in react, user events. Each class based component has its own state object. When it is changed, it is automatically re-rendered.
+
+class based component vs functional component
+class - when we want to have the concept of state.
+functional - when we have a simple component that takes in properties and returns static jsx, always the same
+functional - easier to write, less to write, super lightweight and fast
+
+state in general
+class base component set our state inside our constructor
+in the constructor, we do this.state = { ... } while everywhere else, we used this.setState({...})
+whenever we change our state, our component instantly re-renders with its children
+
+import statements
+we require libraries and files. only our own files require absolute path
+
+callbacks
+callbacks are much more frequent without redux, great way to do parent child communication.
+
+component level state
+each component has its own state that belongs to them. state are very component level vs in redux, it is more application level (higher level of state)
