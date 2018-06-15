@@ -1,25 +1,15 @@
-# ReduxSimpleStarter
+This simple react app is based off Stephen Grider's Udemy course of 'Modern React with Redux'
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+This app uses the YoutubeAPI to fetch a list of videos
 
-### Getting Started
+Follow the steps below to run this application:
 
-There are two methods for getting started with this repo.
+1. in your command line terminal, type: 'git clone https://github.com/chuckolate/simple-react-app-youtube.git'
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+2. go into the repository: 'cd simple-react-app-youtube'
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
+3. install dependencies: 'npm install'
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+4. start the app: 'npm start'
 
-```
-> npm install
-> npm start
-```
+5. go to your browser on local host 8080 (for example, type in  'localhost:8080' on your browser)
